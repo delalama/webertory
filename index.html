@@ -2,6 +2,8 @@
 <html class="no-js" lang="">
 
 <head>
+  <script src="js/jquery-3.6.0.min.js"></script>
+
   <meta charset="utf-8">
   <title></title>
   <meta name="description" content="">
@@ -12,7 +14,6 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
@@ -20,22 +21,47 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
+
+  <script src="js/functions.js"></script>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>REPER TABLE</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<table class="table table-dark">
+  <thead>
+  <tr>
+    <th scope="col" class="byArtist" style="cursor:pointer;" onclick="orderTableBy('id')">ID</th>
+    <th scope="col" class="byArtist" style="cursor:pointer;" onclick="orderTableBy('artist')">ARTIST</th>
+    <th scope="col" class="bySongName" style="cursor:pointer;" onclick="orderTableBy('name')">NAME</th>
+    <th scope="col" class="byBpm" style="cursor:pointer;" onclick="orderTableBy('tempo')">BPM</th>
+    <th scope="col" class="byKey" style="cursor:pointer;" onclick="orderTableBy('key')">KEY</th>
+    <th scope="col" class="byKey" style="cursor:pointer;" onclick="orderTableBy('spotify_link')">SPOTI LINK</th>
+    <th scope="col" class="byKey" style="cursor:pointer;" onclick="orderTableBy('instrumental')">INSTRUMENTAL</th>
+  </tr>
+  </thead>
+  <tbody class="tableBody">
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </tbody>
+</table>
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
 </body>
 
 </html>
