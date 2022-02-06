@@ -19,6 +19,9 @@ function toggleBoloMode(){
     $(".set").remove();
     // delete checks
     $(".checkTd").remove();
+
+    // empty gigList
+    gigList = [];
   }
 
 }

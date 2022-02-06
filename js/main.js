@@ -21,9 +21,19 @@ function showLyrics(elem) {
   hideTable();
   showIcon();
   $("<div class='actualLyrics'>text</div>").appendTo(document.body);
-  $(".actualLyrics").last().html(lyrics);
   addListenersToArrows();
   window.scrollTo(0, 0);
+  if(boloMode){
+    var gigLyrics = [];
+    gigList.forEach(elem => {
+      var lyric = elem.lyrics + '\n\n\n ______________________________________\n\n\n';
+      gigLyrics.push(lyric);
+      }
+    );
+    $(".actualLyrics").last().html(gigLyrics);
+  }else{
+    $(".actualLyrics").last().html(lyrics);
+  }
 }
 
 
