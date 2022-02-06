@@ -11,3 +11,15 @@ $.ajax({
   var sortedJson = sortBy(json, "id", "ASC");
   insertRows(sortedJson);
 });
+
+
+
+function showLyrics(elem) {
+  var jsonId = $(elem)[0].currentTarget.parentElement.getAttribute('jsonId');
+  var lyrics = getLyrics(jsonId);
+  hideTable();
+  showIcon();
+  $("<div class='actualLyrics'>text</div>").appendTo(document.body);
+  $(".actualLyrics").last().html(lyrics);
+  addListenersToArrows();
+}

@@ -261,3 +261,24 @@ textarea {
   }
 }
 
+.icon {
+  height: 91px;
+  width: 23vw;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.icon2 {
+  height: 91px;
+  width: 23vw;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.actualLyrics {
+  font-size: 1.5em;
+  text-align: center;
+  white-space: pre-wrap;
+}
