@@ -84,7 +84,6 @@ function insertArrows(key, directionAsc){
   }else{
     $("<div ><img class='arrow' src='../img/down.png'></div>").appendTo($(identificator));
   }
-
 }
 
 function orderTableBy(key) {
@@ -94,8 +93,8 @@ function orderTableBy(key) {
 }
 
 function showIcon() {
-  $("<div ><img class='icon' src='../img/arrow.png'></div>").appendTo(document.body);
-  $("<div ><img class='icon2' src='../img/arrow.png'></div>").appendTo(document.body);
+  $("<div ><img class='icon' src='https://github.com/delalama/webertory/blob/master/img/arrow.png'></div>").appendTo(document.body);
+  $("<div ><img class='icon2' src='https://github.com/delalama/webertory/blob/master/img/arrow.png").appendTo(document.body);
 }
 
 function getLyrics(jsonId) {
