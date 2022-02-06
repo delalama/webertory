@@ -13,6 +13,8 @@ $.ajax({
 });
 
 function showLyrics(elem) {
+  $(".botonRack").css("display", "none");
+  openFullscreen();
   var jsonId = $(elem)[0].currentTarget.parentElement.getAttribute('jsonId');
   var lyrics = getLyrics(jsonId);
   hideTable();

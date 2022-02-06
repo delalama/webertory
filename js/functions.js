@@ -43,7 +43,6 @@ function isAsc(value) {
 }
 
 function sortBy(json, key) {
-
   var direction = isAsc(key);
   insertArrows(key, direction);
 
@@ -113,20 +112,22 @@ function addListenersToArrows() {
   $(".icon").click(function () {
     $(".actualLyrics").hide();
     showTable();
+    $(".botonRack").css("display", "block");
   });
 
   $(".icon2").click(function () {
     $(".actualLyrics").hide();
     showTable();
+    $(".botonRack").css("display", "block");
   });
 }
 
 
-  // fullscreen code
-
+// fullscreen code
 var elem = document.documentElement;
 function openFullscreen() {
   $('.closeFullscreen').show();
+  $('.openFullscreen').hide();
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.webkitRequestFullscreen) { /* Safari */
@@ -138,6 +139,7 @@ function openFullscreen() {
 
 function closeFullscreen() {
   $('.openFullscreen').show();
+  $('.closeFullscreen').hide();
 
   if (document.exitFullscreen) {
     document.exitFullscreen();
@@ -150,4 +152,4 @@ function closeFullscreen() {
 
 $('.closeFullscreen').hide();
 
-
+// TODO delete "reading lyrics mode" on instrumental song
