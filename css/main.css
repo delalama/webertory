@@ -287,5 +287,12 @@ textarea {
 }
 
 .arrow {
-  font-size: 3em;
+  font-size: 1.5em;
+  padding-left: 0.75em;
+}
+
+.fullButton {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
 }

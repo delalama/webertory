@@ -1,9 +1,9 @@
-var url = "./json/reper.json";
+var jsonUrl = "./json/reper.json";
 var json ;
 var tableSelector = ".table" ;
 
 $.ajax({
-  url: url,
+  url: jsonUrl,
   type: 'GET',
   dataType: 'json'
 }).done(function (resp) {

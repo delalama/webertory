@@ -75,15 +75,20 @@ function getSpotiLinks() {
     spotiLinks.push(value);
   });
 }
+var prevIdentificator ;
 
 function insertArrows(key, directionAsc){
+  $(prevIdentificator).css("color", "");
+
   var identificator = '.' + key;
-  $(".arrow").parent().remove();
+  prevIdentificator = identificator;
+  $(".arrow").remove();
   if(directionAsc){
-    $("<div ><p class='arrow'>↑</p></div>").appendTo($(identificator));
+    $("<a class='arrow'>↑</a>").appendTo($(identificator));
   }else{
-    $("<div ><p class='arrow'>↓</p></div>").appendTo($(identificator));
+    $("<a class='arrow'>↓</a>").appendTo($(identificator));
   }
+  $(identificator).css("color", "orange");
 }
 
 function orderTableBy(key) {
@@ -116,42 +121,33 @@ function addListenersToArrows() {
   });
 }
 
-function insertRows(json) {
-  $.each(json, function (key, value) {
-    var intrumental = value.instrumental === 1 ? 'SI' : 'NO';
 
-    $('.tableBody').append('<tr class="addedRow" style="cursor:pointer;" jsonId="" >' +
-      '<td class="normalValue" onclick="showLyrics(event)" >' + value.id + '</td>' +
-      '<td class="normalValue" onclick="showLyrics(event)" >' + value.artist + '</td>' +
-      '<td class="normalValue" onclick="showLyrics(event)" >' + value.name + '</td>' +
-      '<td class="normalValue" onclick="showLyrics(event)" >' + value.tempo + '</td>' +
-      '<td class="normalValue" onclick="showLyrics(event)" >' + value.key + '</td>' +
-      '<td class="normalValue" onclick="showLyrics(event)" >' + intrumental + '</td>' +
-      '<td><a class="btn btn-primary spotiLink" href="">LINK</a></td>' +
-      '</tr>');
+  // fullscreen code
 
-  });
-
-  // add spotify links to all table
-  for (var j = 0; j < json.length; j++) {
-    spotiLinks.push(json[j].spotify_link);
+var elem = document.documentElement;
+function openFullscreen() {
+  $('.closeFullscreen').show();
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
   }
-
-  var i = 0;
-  $('.spotiLink').each(function () {
-    var oldLink = $(this).attr("href");
-    var newLink = oldLink.replace("", spotiLinks[i]);
-    $(this).attr("href", newLink);
-    i++;
-  });
-
-  // add jsonId to all table
-  i = 0;
-  $('tr.addedRow').each(function () {
-    var oldUrl = $(this).attr("jsonId");
-    var newUrl = oldUrl.replace("", json[i].id);
-    $(this).attr("jsonId", newUrl);
-    i++;
-  });
-
 }
+
+function closeFullscreen() {
+  $('.openFullscreen').show();
+
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+
+$('.closeFullscreen').hide();
+
+
