@@ -302,6 +302,15 @@ textarea {
   border-radius: 0;
 }
 
+.demoButton {
+  width: 100vw;
+  border-radius: 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  font-size: 5em;
+}
+
 .botonRack {
   position: fixed;
   top: 0;
@@ -310,7 +319,6 @@ textarea {
   width: 100vw;
   height: 23px;
   background-color: #e8dfdf;
-
 }
 
 .check {
@@ -324,13 +332,19 @@ textarea {
   vertical-align: middle;
 }
 
-
 .centerContent {
   margin: auto;
   width: 50%;
-
 }
 
 .notSelec {
   user-select: none;
+}
+
+.bigFont {
+  font-size: 3em;
+}
+
+.demoDiv {
+  width: 50vw;
 }

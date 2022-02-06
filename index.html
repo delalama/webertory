@@ -23,33 +23,42 @@
 </head>
 
 <body>
+<div class="entrance">
 
-<div class="login-form centerContent">
   <div class="centerContent notSelec">
     <h1>WEBERTOIRE</h1>
     <h3>order your songs</h3>
+    <h1 class="notSelec">A way to organize and maintain your professional repertoire</h1>
   </div>
 
-  <form>
-    <h1 class="notSelec">Login</h1>
-    <div class="content">
-      <div class="input-field">
-        <input type="email" placeholder="Email" autocomplete="nope">
-      </div>
-      <div class="input-field">
-        <input type="password" placeholder="Password" autocomplete="new-password">
-      </div>
-      <a href="#" class="link">Forgot Your Password?</a>
+  <div class="login-form demoDiv">
+    <div class="loginButton action">
+      <button class="bigFont" onclick="showDemo()">CHECK A DEMO</button>
     </div>
-    <div class="action">
-      <button>Register</button>
-      <button>Sign in</button>
-    </div>
-  </form>
+  </div>
+
+  <div class="login-form centerContent">
+    <form>
+      <h1 class="notSelec">Login</h1>
+      <div class="content">
+        <div class="input-field">
+          <input type="email" placeholder="Email" autocomplete="nope">
+        </div>
+        <div class="input-field">
+          <input type="password" placeholder="Password" autocomplete="new-password">
+        </div>
+        <a href="#" class="link">Forgot Your Password?</a>
+      </div>
+      <div class="action">
+        <button>Register</button>
+        <button>Sign in</button>
+      </div>
+    </form>
+  </div>
 </div>
 
-<div class="demo" style="visibility: hidden;">
-
+<div class="demo">
+  <button type="button" class="btn btn-warning demoButton" onclick="getOutDemo()">GET OUT DEMO</button>
 
   <div class="botonRack row">
     <button type="button" class="btn btn-primary openFullscreen fullButton" onclick="openFullscreen()">FULLSCREEN</button>
@@ -67,7 +76,7 @@
       <th scope="col" class="key" style="cursor:pointer;" onclick="orderTableBy('key')">KEY</th>
       <th scope="col" class="instrumental" style="cursor:pointer;" onclick="orderTableBy('instrumental')">INSTRUMENTAL</th>
       <th scope="col" class="year" style="cursor:pointer;" onclick="orderTableBy('year')">YEAR</th>
-      <th scope="col" class="spotyLink" style="cursor:pointer;">SPOTI</th>
+      <th scope="col" class="spotyLink" style="cursor:pointer;">SPOTIFY</th>
     </tr>
     </thead>
     <tbody class="tableBody">
@@ -79,6 +88,7 @@
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script src="json/pass.js"></script>
 <script src="js/mode.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/rows.js"></script>

@@ -2,6 +2,7 @@ var jsonUrl = "./json/reper.json";
 var json ;
 var tableSelector = ".table" ;
 var boloMode = false ;
+var demoMode = true;
 
 $.ajax({
   url: jsonUrl,
@@ -39,3 +40,13 @@ function showLyrics(elem) {
 }
 
 
+function showDemo(){
+  $('.entrance').hide();
+  $('.demo').show();
+}
+function getOutDemo(){
+  $('.entrance').show();
+  $('.demo').hide();
+}
+
+$('.demo').hide();
