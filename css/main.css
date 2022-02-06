@@ -302,15 +302,6 @@ textarea {
   border-radius: 0;
 }
 
-.demoButton {
-  width: 100vw;
-  border-radius: 0;
-  position: fixed;
-  bottom: 0;
-  z-index: 1;
-  font-size: 5em;
-}
-
 .botonRack {
   position: fixed;
   top: 0;

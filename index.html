@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/demo.css">
   <meta name="theme-color" content="#fafafa">
 
   <script src="js/jquery-3.6.0.min.js"></script>
@@ -38,20 +39,20 @@
   </div>
 
   <div class="login-form centerContent">
-    <form>
+    <form onsubmit="return false;">
       <h1 class="notSelec">Login</h1>
       <div class="content">
         <div class="input-field">
-          <input type="email" placeholder="Email" autocomplete="nope">
+          <input type="email" placeholder="Email" autocomplete="nope" class="email">
         </div>
         <div class="input-field">
-          <input type="password" placeholder="Password" autocomplete="new-password">
+          <input type="password" placeholder="Password" autocomplete="new-password" class="password">
         </div>
         <a href="#" class="link">Forgot Your Password?</a>
       </div>
       <div class="action">
         <button>Register</button>
-        <button>Sign in</button>
+        <button onclick="login()">Sign in</button>
       </div>
     </form>
   </div>
@@ -91,6 +92,7 @@
 <script src="json/pass.js"></script>
 <script src="js/mode.js"></script>
 <script src="js/functions.js"></script>
+<script src="js/devUtils.js"></script>
 <script src="js/rows.js"></script>
 
 </body>

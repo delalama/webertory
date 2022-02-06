@@ -3,6 +3,7 @@ var json ;
 var tableSelector = ".table" ;
 var boloMode = false ;
 var demoMode = true;
+var credens ;
 
 $.ajax({
   url: jsonUrl,
@@ -39,7 +40,6 @@ function showLyrics(elem) {
   }
 }
 
-
 function showDemo(){
   $('.entrance').hide();
   $('.demo').show();
@@ -47,6 +47,29 @@ function showDemo(){
 function getOutDemo(){
   $('.entrance').show();
   $('.demo').hide();
+}
+
+function login(){
+  var email = $('.email').val();
+  var password = $('.password').val();
+
+  var log = email + password;
+
+  var preEmailUser = allowedUsers.filter(function(elem){
+    return elem.email == email;
+  });
+
+  preEmailUser[0].password == password ? demoMode= false: demoMode= true;
+
+  if(!demoMode) {
+    $('.demo').show();
+    fullVersion();
+  }
+
+}
+
+function fullVersion() {
+  $('.demoButton').hide();
 }
 
 $('.demo').hide();
