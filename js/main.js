@@ -12,8 +12,6 @@ $.ajax({
   insertRows(sortedJson);
 });
 
-
-
 function showLyrics(elem) {
   var jsonId = $(elem)[0].currentTarget.parentElement.getAttribute('jsonId');
   var lyrics = getLyrics(jsonId);
