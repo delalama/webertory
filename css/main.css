@@ -323,3 +323,14 @@ textarea {
   text-align: center;
   vertical-align: middle;
 }
+
+
+.centerContent {
+  margin: auto;
+  width: 50%;
+
+}
+
+.notSelec {
+  user-select: none;
+}
