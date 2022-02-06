@@ -265,14 +265,14 @@ textarea {
   position: fixed;
   right: 0;
   top: 0;
-  font-size: 10em;
+  font-size: 7em;
 }
 
 .icon2 {
   position: fixed;
   right: 0;
   bottom: 0;
-  font-size: 10em;
+  font-size: 7em;
 }
 
 .actualLyrics {
@@ -284,6 +284,7 @@ textarea {
 .table td, .table th {
   text-align: center;
   vertical-align: middle;
+  padding: 0.5rem;
 }
 
 .table {
@@ -298,7 +299,8 @@ textarea {
 
 .fullButton {
   margin: auto;
-  width: 49.8%;
+  width: 50%;
+  border-radius: 0;
 }
 
 .botonRack {
@@ -306,7 +308,7 @@ textarea {
   top: 0;
   left: 0;
   z-index: 999;
-  width: 100%;
+  width: 104vw;
   height: 23px;
   background-color: #e8dfdf;
 

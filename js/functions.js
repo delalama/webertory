@@ -62,6 +62,7 @@ function hideTable() {
 }
 
 function showTable() {
+  window.scrollTo(0, 0);
   $('.icon').hide();
   $('.icon2').hide();
   $(tableSelector).show();
@@ -111,14 +112,14 @@ function getLyrics(jsonId) {
 function addListenersToArrows() {
   $(".icon").click(function () {
     $(".actualLyrics").hide();
+    $(".botonRack").show();
     showTable();
-    $(".botonRack").css("display", "block");
   });
 
   $(".icon2").click(function () {
     $(".actualLyrics").hide();
+    $(".botonRack").show();
     showTable();
-    $(".botonRack").css("display", "block");
   });
 }
 
@@ -175,3 +176,4 @@ function setCheck(event){
 
 }
 // TODO delete "reading lyrics mode" on instrumental song
+// TODO create a way to insert new songs.

@@ -15,7 +15,7 @@ $.ajax({
 
 function showLyrics(elem) {
   // prepare screen
-  $(".botonRack").css("display", "none");
+  $(".botonRack").hide();
   openFullscreen();
   var jsonId = $(elem)[0].currentTarget.parentElement.getAttribute('jsonId');
   var lyrics = getLyrics(jsonId);

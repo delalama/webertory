@@ -20,8 +20,15 @@ html {
  * Remove the margin in all browsers.
  */
 
+#element::-webkit-scrollbar {
+  display: none;
+}
+
+
 body {
   margin: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
 }
 
 /**
