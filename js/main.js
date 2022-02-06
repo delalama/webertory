@@ -21,3 +21,4 @@ function showLyrics(elem) {
   $(".actualLyrics").last().html(lyrics);
   addListenersToArrows();
 }
+

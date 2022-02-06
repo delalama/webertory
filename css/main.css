@@ -262,19 +262,17 @@ textarea {
 }
 
 .icon {
-  height: 91px;
-  width: 23vw;
   position: fixed;
   right: 0;
   top: 0;
+  font-size: 10em;
 }
 
 .icon2 {
-  height: 91px;
-  width: 23vw;
   position: fixed;
   right: 0;
   bottom: 0;
+  font-size: 10em;
 }
 
 .actualLyrics {
@@ -289,8 +287,5 @@ textarea {
 }
 
 .arrow {
-  width: 30px;
-  height: 40px;
-  invert: 1;
-  filter: invert(1);
+  font-size: 3em;
 }

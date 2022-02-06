@@ -78,11 +78,11 @@ function getSpotiLinks() {
 
 function insertArrows(key, directionAsc){
   var identificator = '.' + key;
-  $(".arrow").hide();
+  $(".arrow").parent().remove();
   if(directionAsc){
-    $("<div ><img class='arrow' src='../img/up.png'></div>").appendTo($(identificator));
+    $("<div ><p class='arrow'>↑</p></div>").appendTo($(identificator));
   }else{
-    $("<div ><img class='arrow' src='../img/down.png'></div>").appendTo($(identificator));
+    $("<div ><p class='arrow'>↓</p></div>").appendTo($(identificator));
   }
 }
 
@@ -93,8 +93,8 @@ function orderTableBy(key) {
 }
 
 function showIcon() {
-  $("<div ><img class='icon' src='https://github.com/delalama/webertory/blob/master/img/arrow.png'></div>").appendTo(document.body);
-  $("<div ><img class='icon2' src='https://github.com/delalama/webertory/blob/master/img/arrow.png'></div>").appendTo(document.body);
+  $("<div ><p class='icon'>←</p></div>").appendTo(document.body);
+  $("<div ><p class='icon2'>←</p></div>").appendTo(document.body);
 }
 
 function getLyrics(jsonId) {
