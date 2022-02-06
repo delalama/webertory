@@ -182,3 +182,4 @@ function setCheck(event){
 }
 // TODO delete "reading lyrics mode" on instrumental song
 // TODO create a way to insert new songs.
+// TODO user has his own json.
