@@ -10,6 +10,7 @@ var songName = false;
 var tempo = false;
 var key = false;
 var instrumental = false;
+var year = false;
 
 function isAsc(value) {
   switch (value) {
@@ -36,6 +37,10 @@ function isAsc(value) {
     case "instrumental":
       instrumental = !instrumental;
       return instrumental;
+      break;
+    case "year":
+      year = !year;
+      return year;
       break;
     default:
   }

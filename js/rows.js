@@ -9,6 +9,7 @@ function insertRows(json) {
       '<td class="normalValue" onclick="showLyrics(event)" >' + value.tempo + '</td>' +
       '<td class="normalValue" onclick="showLyrics(event)" >' + value.key + '</td>' +
       '<td class="normalValue" onclick="showLyrics(event)" >' + intrumental + '</td>' +
+      '<td class="normalValue" onclick="showLyrics(event)" >' + value.year + '</td>' +
       '<td><a class="btn btn-primary spotiLink" href="">LINK</a></td>' +
       '</tr>');
 
