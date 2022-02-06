@@ -69,7 +69,7 @@ function insertRows(json) {
   $.each(json, function (key, value) {
     var intrumental = value.instrumental === 1 ? 'SI' : 'NO';
 
-    $('.table').append('<tr class="addedRow" style="cursor:pointer;" jsonId="" >' +
+    $('.tableBody').append('<tr class="addedRow" style="cursor:pointer;" jsonId="" >' +
       '<td class="normalValue" onclick="showLyrics(event)" >' + value.id + '</td>' +
       '<td class="normalValue" onclick="showLyrics(event)" >' + value.artist + '</td>' +
       '<td class="normalValue" onclick="showLyrics(event)" >' + value.name + '</td>' +
