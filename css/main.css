@@ -282,3 +282,8 @@ textarea {
   text-align: center;
   white-space: pre-wrap;
 }
+
+.table td, .table th {
+  text-align: center;
+  vertical-align: middle;
+}

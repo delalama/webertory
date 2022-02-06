@@ -8,7 +8,7 @@ $.ajax({
   dataType: 'json'
 }).done(function (resp) {
   json  = resp.reper;
-  var sortedJson = sortBy(json, "id", "ASC");
+  var sortedJson = sortBy(json, "id");
   insertRows(sortedJson);
 });
 

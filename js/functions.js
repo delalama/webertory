@@ -4,14 +4,52 @@ function clearTable() {
   $('.addedRow').remove();
 }
 
-function sortBy(json, key, way) {
+var id = false;
+var artist = false;
+var songName = false;
+var tempo = false;
+var key = false;
+var instrumental = false;
+
+function isAsc(value) {
+  switch (value) {
+    case "id":
+      id = !id;
+      return id;
+      break;
+    case "artist":
+      artist = !artist;
+      return artist;
+      break;
+    case "name":
+      songName = !songName;
+      return songName;
+      break;
+    case "tempo":
+      tempo = !tempo;
+      return tempo;
+      break;
+    case "key":
+      key = !key;
+      return key;
+      break;
+    case "instrumental":
+      instrumental = !instrumental;
+      return instrumental;
+      break;
+    default:
+  }
+
+}
+
+function sortBy(json, key) {
+  var direction = isAsc(key);
   return json.sort(function (a, b) {
     var x = a[key];
     var y = b[key];
-    if (way === 'ASC') {
+    if (direction) {
       return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-    }
-    if (way === 'DEC') {
+    } else {
       return ((x > y) ? -1 : ((x < y) ? 1 : 0));
     }
   });
@@ -36,7 +74,7 @@ function getSpotiLinks() {
 }
 
 function orderTableBy(key) {
-  json = sortBy(json, key, "ASC");
+  json = sortBy(json, key);
   clearTable();
   insertRows(json);
 }
@@ -53,7 +91,7 @@ function getLyrics(jsonId) {
   return filteredRow[0].lyrics;
 }
 
-function addListenersToArrows(){
+function addListenersToArrows() {
   $(".icon").click(function () {
     $(".actualLyrics").hide();
     showTable();
