@@ -62,14 +62,15 @@ function login(){
   preEmailUser[0].password == password ? demoMode= false: demoMode= true;
 
   if(!demoMode) {
-    $('.demo').show();
     fullVersion();
   }
 
 }
 
 function fullVersion() {
+  $('.demo').show();
   $('.demoButton').hide();
+  $('.entrance').hide();
 }
 
 $('.demo').hide();
