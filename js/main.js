@@ -14,6 +14,7 @@ $.ajax({
 });
 
 function showLyrics(elem) {
+  // prepare screen
   $(".botonRack").css("display", "none");
   openFullscreen();
   var jsonId = $(elem)[0].currentTarget.parentElement.getAttribute('jsonId');
@@ -23,10 +24,11 @@ function showLyrics(elem) {
   $("<div class='actualLyrics'>text</div>").appendTo(document.body);
   addListenersToArrows();
   window.scrollTo(0, 0);
+
   if(boloMode){
     var gigLyrics = [];
     gigList.forEach(elem => {
-      var lyric = elem.lyrics + '\n\n\n ______________________________________\n\n\n';
+      var lyric = '<b>' + elem.artist + '</b>' + ' - ' + '<i>' + elem.name + '</i>      |' + '   ' + elem.key + '\n\n\n' + elem.lyrics + '\n\n\n ______________________________________\n\n\n';
       gigLyrics.push(lyric);
       }
     );
