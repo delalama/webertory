@@ -1,6 +1,7 @@
 var jsonUrl = "./json/reper.json";
 var json ;
 var tableSelector = ".table" ;
+var boloMode = false ;
 
 $.ajax({
   url: jsonUrl,
@@ -22,5 +23,7 @@ function showLyrics(elem) {
   $("<div class='actualLyrics'>text</div>").appendTo(document.body);
   $(".actualLyrics").last().html(lyrics);
   addListenersToArrows();
+  window.scrollTo(0, 0);
 }
+
 

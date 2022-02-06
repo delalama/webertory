@@ -24,13 +24,14 @@
 <body>
 
 <div class="botonRack">
-  <button type="button" class="btn btn-primary openFullscreen fullButton" onclick="openFullscreen()"> FULLSCREEN </button>
-  <button type="button" class="btn btn-primary closeFullscreen fullButton" onclick="closeFullscreen()"> CLOSE FULLSCREEN </button>
+  <button type="button" class="btn btn-primary openFullscreen fullButton" onclick="openFullscreen()">FULLSCREEN</button>
+  <button type="button" class="btn btn-primary closeFullscreen fullButton" onclick="closeFullscreen()">CLOSE FULLSCREEN</button>
+  <button type="button" class="btn btn-success fullButton boloMode" onclick="toggleBoloMode()">BOLO MODE OFF</button>
 </div>
 
 <table class="table table-dark">
   <thead>
-  <tr>
+  <tr class="tableHeads">
     <th scope="col" class="id" style="cursor:pointer;" onclick="orderTableBy('id')">ID</th>
     <th scope="col" class="artist" style="cursor:pointer;" onclick="orderTableBy('artist')">ARTIST</th>
     <th scope="col" class="name" style="cursor:pointer;" onclick="orderTableBy('name')">NAME</th>
@@ -48,6 +49,7 @@
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script src="js/mode.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/rows.js"></script>
 

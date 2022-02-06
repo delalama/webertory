@@ -152,4 +152,26 @@ function closeFullscreen() {
 
 $('.closeFullscreen').hide();
 
+var gigList = [];
+function setCheck(event){
+  var jsonId = event.target.parentElement.parentElement.getAttribute('jsonid');
+
+  var filteredRow = json.filter(function (entry) {
+    return entry.id === parseInt(jsonId);
+  });
+
+  //add check to json if checked
+  if(event.currentTarget.checked){
+    filteredRow[0].checked = true;
+    gigList.push(filteredRow[0]);
+  }else{
+    filteredRow[0].checked = false;
+    gigList = gigList.filter(function(elem){
+      return elem != filteredRow[0];
+    });
+  }
+
+  console.log(filteredRow[0]);
+
+}
 // TODO delete "reading lyrics mode" on instrumental song

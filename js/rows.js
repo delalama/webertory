@@ -11,7 +11,16 @@ function insertRows(json) {
       '<td class="normalValue" onclick="showLyrics(event)" >' + intrumental + '</td>' +
       '<td><a class="btn btn-primary spotiLink" href="">LINK</a></td>' +
       '</tr>');
+
+    if(boloMode){
+      if(value.checked){
+        $(".addedRow").last().prepend('<td class="checkTd"><input type="checkbox" class="custom-control-input check" id="customCheck1" onClick="setCheck(event)" checked/></td>');
+      }else{
+        $(".addedRow").last().prepend('<td class="checkTd"><input type="checkbox" class="custom-control-input check" id="customCheck1" onClick="setCheck(event)" /></td>');
+      }
+    }
   });
+
 
   // add spotify links to all table
   for (var j = 0; j < json.length; j++) {
