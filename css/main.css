@@ -298,8 +298,7 @@ textarea {
 }
 
 .fullButton {
-  margin: auto;
-  width: 50%;
+  width: 50vw;
   border-radius: 0;
 }
 
@@ -308,7 +307,7 @@ textarea {
   top: 0;
   left: 0;
   z-index: 999;
-  width: 104vw;
+  width: 100vw;
   height: 23px;
   background-color: #e8dfdf;
 
