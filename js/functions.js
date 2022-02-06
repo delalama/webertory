@@ -43,7 +43,10 @@ function isAsc(value) {
 }
 
 function sortBy(json, key) {
+
   var direction = isAsc(key);
+  insertArrows(key, direction);
+
   return json.sort(function (a, b) {
     var x = a[key];
     var y = b[key];
@@ -71,6 +74,17 @@ function getSpotiLinks() {
   $.each(json, function (key, value) {
     spotiLinks.push(value);
   });
+}
+
+function insertArrows(key, directionAsc){
+  var identificator = '.' + key;
+  $(".arrow").hide();
+  if(directionAsc){
+    $("<div ><img class='arrow' src='../img/up.png'></div>").appendTo($(identificator));
+  }else{
+    $("<div ><img class='arrow' src='../img/down.png'></div>").appendTo($(identificator));
+  }
+
 }
 
 function orderTableBy(key) {
@@ -139,10 +153,6 @@ function insertRows(json) {
     var newUrl = oldUrl.replace("", json[i].id);
     $(this).attr("jsonId", newUrl);
     i++;
-  });
-
-  $('.normalValue').each(function () {
-    $(this).attr("onClick", showLyrics);
   });
 
 }

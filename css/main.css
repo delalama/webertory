@@ -287,3 +287,10 @@ textarea {
   text-align: center;
   vertical-align: middle;
 }
+
+.arrow {
+  width: 30px;
+  height: 40px;
+  invert: 1;
+  filter: invert(1);
+}
