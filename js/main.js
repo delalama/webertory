@@ -2,7 +2,7 @@ var jsonUrl = "./json/reper.json";
 var json ;
 var tableSelector = ".table" ;
 var boloMode = false ;
-var demoMode = true;
+var demoMode = false;
 var credens ;
 
 $.ajax({
@@ -61,9 +61,7 @@ function login(){
 
   preEmailUser[0].password == password ? demoMode= false: demoMode= true;
 
-  if(!demoMode) {
     fullVersion();
-  }
 
 }
 

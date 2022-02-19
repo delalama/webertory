@@ -24,67 +24,32 @@
 </head>
 
 <body>
-<div class="entrance">
 
-  <div class="centerContent notSelec">
-    <h1>WEBERTOIRE</h1>
-    <h3 >A way to organize and maintain your professional repertoire</h3>
-  </div>
 
-  <div class="login-form demoDiv">
-    <div class="loginButton action">
-      <button class="bigFont" onclick="showDemo()">CHECK A DEMO</button>
-    </div>
-  </div>
-
-  <div class="login-form centerContent">
-    <form onsubmit="return false;">
-      <h1 class="notSelec">Login</h1>
-      <div class="content">
-        <div class="input-field">
-          <input type="email" placeholder="Email" autocomplete="nope" class="email">
-        </div>
-        <div class="input-field">
-          <input type="password" placeholder="Password" autocomplete="new-password" class="password">
-        </div>
-        <a href="#" class="link">Forgot Your Password?</a>
-      </div>
-      <div class="action">
-        <button>Register</button>
-        <button onclick="login()">Sign in</button>
-      </div>
-    </form>
-  </div>
+<div class="botonRack row">
+  <button type="button" class="btn btn-primary openFullscreen fullButton" onclick="openFullscreen()">FULLSCREEN</button>
+  <button type="button" class="btn btn-primary closeFullscreen fullButton" onclick="closeFullscreen()">CLOSE FULLSCREEN</button>
+  <button type="button" class="btn btn-success fullButton boloMode" onclick="toggleBoloMode()">BOLO MODE OFF</button>
 </div>
 
-<div class="demo">
-  <button type="button" class="btn btn-warning demoButton" onclick="getOutDemo()">GET OUT DEMO</button>
+<table class="table table-dark">
+  <thead>
+  <tr class="tableHeads">
+    <th scope="col" class="id" style="cursor:pointer;" onclick="orderTableBy('id')">ID</th>
+    <th scope="col" class="artist" style="cursor:pointer;" onclick="orderTableBy('artist')">ARTIST</th>
+    <th scope="col" class="name" style="cursor:pointer;" onclick="orderTableBy('name')">NAME</th>
+    <th scope="col" class="tempo" style="cursor:pointer;" onclick="orderTableBy('tempo')">BPM</th>
+    <th scope="col" class="key" style="cursor:pointer;" onclick="orderTableBy('key')">KEY</th>
+    <th scope="col" class="instrumental" style="cursor:pointer;" onclick="orderTableBy('instrumental')">INSTRUMENTAL</th>
+    <th scope="col" class="year" style="cursor:pointer;" onclick="orderTableBy('year')">YEAR</th>
+    <th scope="col" class="spotyLink" style="cursor:pointer;">SPOTIFY</th>
+  </tr>
+  </thead>
+  <tbody class="tableBody">
 
-  <div class="botonRack row">
-    <button type="button" class="btn btn-primary openFullscreen fullButton" onclick="openFullscreen()">FULLSCREEN</button>
-    <button type="button" class="btn btn-primary closeFullscreen fullButton" onclick="closeFullscreen()">CLOSE FULLSCREEN</button>
-    <button type="button" class="btn btn-success fullButton boloMode" onclick="toggleBoloMode()">BOLO MODE OFF</button>
-  </div>
+  </tbody>
+</table>
 
-  <table class="table table-dark">
-    <thead>
-    <tr class="tableHeads">
-      <th scope="col" class="id" style="cursor:pointer;" onclick="orderTableBy('id')">ID</th>
-      <th scope="col" class="artist" style="cursor:pointer;" onclick="orderTableBy('artist')">ARTIST</th>
-      <th scope="col" class="name" style="cursor:pointer;" onclick="orderTableBy('name')">NAME</th>
-      <th scope="col" class="tempo" style="cursor:pointer;" onclick="orderTableBy('tempo')">BPM</th>
-      <th scope="col" class="key" style="cursor:pointer;" onclick="orderTableBy('key')">KEY</th>
-      <th scope="col" class="instrumental" style="cursor:pointer;" onclick="orderTableBy('instrumental')">INSTRUMENTAL</th>
-      <th scope="col" class="year" style="cursor:pointer;" onclick="orderTableBy('year')">YEAR</th>
-      <th scope="col" class="spotyLink" style="cursor:pointer;">SPOTIFY</th>
-    </tr>
-    </thead>
-    <tbody class="tableBody">
-
-    </tbody>
-  </table>
-
-</div>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>

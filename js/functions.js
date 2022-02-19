@@ -183,3 +183,12 @@ function setCheck(event){
 // TODO delete "reading lyrics mode" on instrumental song
 // TODO create a way to insert new songs.
 // TODO user has his own json.
+// TODO filtros para artist y song.
+// TODO info intérpretes.
+// TODO normalización DB.
+// TODO save listados.
+// TODO save song sheets per instrument.
+// TODO check convertido en número
+// TODO widget metrónomo google, mashable
+// TODO check descanso
+
